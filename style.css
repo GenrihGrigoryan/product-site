@@ -200,6 +200,8 @@ video{
   
 .active:after {
     /* content: "-"; */
+    color: var(--font-color);
+    font-weight: 300;
     transform-origin: center;
     transform: rotate(135deg);
     transition: all 0.5s ease-in-out;
