@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
+        panel.style.opacity = null;
         } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.opacity = 1;
         } 
     });
     }

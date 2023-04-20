@@ -40,6 +40,13 @@ body{
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
+    letter-spacing: normal;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
     transition: all 0.5s ease-in-out;
 }
 
@@ -162,6 +169,11 @@ video{
     margin-block-start: 2rem;
 }
 
+.panel p{
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+}
+
 .accordion {
     padding: 0.5rem 0 0 0;
     cursor: pointer;
@@ -172,11 +184,7 @@ video{
     font-size: inherit;
     background-color: transparent;
     color: var(--font-color);
-}
-  
-.panel p{
-    margin-block-start: 0.25em;
-    margin-block-end: 0.25em;
+    transition: all 0.5s ease-in-out;
 }
 
 .accordion:after {
@@ -185,16 +193,23 @@ video{
     font-weight: 300;
     float: right;
     margin-left: 5px;
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
 }
   
 .active:after {
-    content: "-";
+    /* content: "-"; */
+    transform-origin: center;
+    transform: rotate(135deg);
+    transition: all 0.5s ease-in-out;
 }
   
 .panel {
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 1200px) {
