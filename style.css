@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 :root {
---margin-block-start-big: 4rem;
+--margin-block-start-big: 6rem;
 }
 
 #fader {
@@ -200,11 +200,15 @@ video{
 @media screen and (max-width: 1200px) {
 
     :root{
-    --margin-block-start-big: 3rem;
+    --margin-block-start-big: 4rem;
     }
 
     .split-div{
         display: block;
+    }
+
+    .split-div *{
+        width: 100% !important;
     }
 
     body{
