@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var fader = document.getElementById('fader');
     
     for (var idx=0; idx<anchors.length; idx+=1) {
+        if (anchors[idx].hostname !== window.location.hostname ||
+            anchors[idx].pathname === window.location.pathname) {
+            continue;
+        }
+
         anchors[idx].addEventListener('click', function(event) {
                 var anchor = event.currentTarget;
             
@@ -50,3 +55,17 @@ window.addEventListener('pageshow', function (event) {
     var fader = document.getElementById('fader');
     fader.classList.remove('fade-in');
 });
+
+function SelectRadio(choice) {
+    const yesBtn = document.getElementById(choice);
+    yesBtn.checked = true;
+    /*
+    const radioButtons = document.querySelectorAll('input[name="tabs"]');
+    for (const radioButton of radioButtons) {
+        if (radioButton.id == choice) {
+            radioButton.checked = true;
+            break;
+        }
+    }
+    */
+}
