@@ -241,7 +241,19 @@ IntelliBar is just a UI for the ChatGPT API. Your questions go directly to the C
 <footer>
     По вопросам пишите на почту <a>mail@mail.com</a> или в телеграм <a>@mailme</a>.
 </footer>
-<script type="text/javascript" src="zenscroll-min.js"></script>
+
+
+<!--<script type="text/javascript" src="zenscroll-min.js"></script>-->
+<script src="smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 2500,
+	speedAsDuration: true,
+    easing: 'easeInOutCubic'
+});
+</script>
+
+
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 --readable-width: 768px;
 }
 
+  
 #fader {
     position: fixed;
     top: 0;
@@ -50,7 +51,9 @@ body{
     transition: all 0.5s ease-in-out;
 }
 
-body, .smooth-container { scroll-behavior: smooth }
+
+html, .smooth-container { scroll-behavior: smooth }
+
 
 mark{
     background-color: var(--underline-link);
@@ -141,6 +144,7 @@ a:hover{
     padding: 0.5rem 1rem;
     color: var(--bg-color);
     background-color: var(--link-color);
+    border: none;
 }
 
 .centered{
