@@ -2,7 +2,7 @@
 
 :root {
 --margin-block-start-big: 6rem;
---readable-width: 768px;
+--readable-width: 800px;
 }
 
   
@@ -31,7 +31,7 @@
 
 body{
     background-color: var(--bg-color);
-    max-width: 1024px;
+    max-width: 1280px; /*1024px;*/
     margin: auto;
 
     padding: 0 4rem;
@@ -125,6 +125,18 @@ a:hover{
     color: var(--link-hover);
 }
 
+.vertical-demitter{
+    margin: 1em;
+}
+
+.border-05px{
+    border: solid 0.5px var(--font-color);;
+}
+
+.border-1px{
+    border: solid 1px var(--font-color);;
+}
+
 .border-2px{
     border: solid 2px var(--font-color);;
 }
@@ -135,16 +147,51 @@ a:hover{
 
 .button{
     border-radius: 1rem;
-    padding: 1rem 0rem;
-    min-width: 280px;
+    padding: 1rem 2rem; /* 1rem 0rem; */
+    min-width: 220px;
 }
+
+.width-fit-content{
+    width: fit-content;
+}
+
+.upfont{
+    /* padding: 0rem 2rem; */
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+
+.downfont{
+    /* padding: 0rem 2rem; */
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    /*
+    margin-block-start: 6px;
+    margin-block-end: 0;
+    */
+}
+
+
 
 .inline-button{
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     color: var(--bg-color);
     background-color: var(--link-color);
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: fit-content;
     border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a.inline-button:hover{
+    background-color: var(--link-hover);
+    color: var(--bg-color);
 }
 
 .centered{
@@ -152,7 +199,7 @@ a:hover{
 }
 
 .tier-button{
-    margin: 1rem 1rem 0rem 1rem;
+    margin: 1rem 0rem 0.5rem 0rem;
     padding: 0.5rem;
     font-weight: 600;
     background-color: var(--link-color);
@@ -166,10 +213,16 @@ a:hover{
     text-align: left;
 }
 
+.header-num{
+    color: var(--secondary-color);
+    margin-left: -32px;
+    margin-right: 16px;
+}
+
 .price{
     color: var(--secondary-color);
     font-weight: 500;
-    padding-left: 1rem;
+    padding: 0 1rem 0 1rem;
     line-height: 2.5rem;
 }
 
@@ -177,28 +230,22 @@ a:hover{
     width: 100%;
 }
 
-.upfont{
-    padding: 0rem 2rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    font-size: 1.5rem;
-    color: var(--font-color);
-}
-
-.downfont{
-    padding: 0rem 2rem;
-    line-height: 1.5rem;
-    font-size: 1.25rem;
-    margin-block-start: 6px;
-    margin-block-end: 0;
+.color-secondary{
     color: var(--secondary-color);
 }
 
-.grid{
+.grid3{
     display: grid;
     row-gap: 2rem;
     column-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid2{
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 hr{
@@ -255,6 +302,15 @@ video[poster]{
     margin-block-start: 1rem;
 }
 
+.margin-block-start-mini{
+    margin-block-start: 6px;
+}
+
+
+.margin-block-end-small{
+    margin-block-end: 1rem;
+}
+
 .panel p{
     margin-block-start: 0.25em;
     margin-block-end: 0.25em;
@@ -268,7 +324,7 @@ blockquote {
     transition: border-color 0.5s ease-in-out;
 }
 
-.accordion {
+.accordion-left, .accordion-right {
     padding: 0.5rem 0 0 0;
     cursor: pointer;
     width: 100%;
@@ -281,19 +337,27 @@ blockquote {
     transition: all 0.5s ease-in-out;
 }
 
-.accordion:after {
+.accordion-left:before, .accordion-right:after {
     content: '+';
     color: var(--font-color);
     font-weight: 300;
+    width: 16px;
+}
+
+.accordion-left:before{
+    float: left;
+    margin-right: 8px;
+}
+
+.accordion-right:after {
     float: right;
-    margin-left: 5px;
+    margin-left: 8px;
 }
   
-.active:after {
+.accordion-right.active:after, .accordion-left.active:before {
     content: "-";
-    color: var(--font-color);
-    font-weight: 300;
 }
+
   
 .panel {
     max-height: 0;
@@ -302,12 +366,55 @@ blockquote {
     transition: all 0.5s ease-in-out;
 }
 
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1rem;
-  }
+
   
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tabs>input[type="radio"]:checked+label {
+    border: 2px solid var(--font-color);
+    color: var(--font-color);
+  }
+
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    /*
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 1rem;
+    */
+  }
+
+  #tab1:checked~#content-1,
+  #tab2:checked~#content-2,
+  #tab3:checked~#content-3 {
+    display: block;
+  }
+
+  .tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    /*
+    font-size: 16px;
+    line-height: 1.5;
+    */
+    border-radius: 1rem;
+    cursor: pointer;
+    
+    margin-bottom: 8px;
+    
+  }
+
+
+
+    /*
   .tab{
     border-top: 1px solid var(--font-color);
     max-width: var(--readable-width);
@@ -333,11 +440,11 @@ blockquote {
     height: 100%;
     display: none;
   }
+   */
+
    
-  .tabs input[type="radio"] {
-    display: none;
-  }
-   
+
+  /*
   .tabs input[type="radio"]:checked + label {
     color: var(--font-color);
     border-bottom: 2px solid var(--font-color);
@@ -346,11 +453,20 @@ blockquote {
   .tabs input[type="radio"]:checked + label + .tab {
     display: block;
   }
+*/
+
+li:not(:last-child) {
+    margin-bottom: 4px;
+}
 
 
 @media screen and (max-width: 1200px) {
-    .grid{
+    .grid3{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vertical-demitter{
+        display: flex;
     }
 }
 
@@ -360,17 +476,26 @@ blockquote {
     --margin-block-start-big: 4rem;
     }
 
-    .button-line{
-        display: flex;
-        flex-direction: column;
-    }
-
     .split-div{
         display: block;
     }
 
     .split-div *{
         width: 100% !important;
+    }
+
+    .header-num{
+        margin-left: 0px;
+        margin-right: 6px;
+    }
+
+    .button-line{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button{
+        width: auto;
     }
 
     body{
@@ -382,12 +507,40 @@ blockquote {
 
 @media screen and (max-width: 720px) {
 
-    body{
-        padding: 0 1rem;
+    .tabs>label {
+        display: flex;
     }
 
-    .grid{
+    .button{
+        padding: 0.75rem 1rem;
+    }
+
+    /*
+    .upfont{
+        padding: 0rem 1rem;
+    }
+
+    .downfont{
+        padding: 0rem 1rem;
+    }
+    */
+
+    body{
+        padding: 0 1rem;
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+    }
+
+    .grid3, .grid2{
         grid-template-columns: repeat(1, 1fr);
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body{
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -417,7 +570,7 @@ blockquote {
         --code-color: #333333;
         --deep-black: #fff;
         --nav: #212121;
-        --underline-link: #5e43987f;
+        --underline-link: #3b2a60;
         --link-hover: rgb(255, 119, 58);
     }
 }

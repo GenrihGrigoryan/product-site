@@ -1,242 +1,398 @@
 <!DOCTYPE html>
 <html lang="ru">
 <meta charset="utf-8">
+
 <head>
 
-  <title>Конструктор Смысла</title>
+    <title>Конструктор Смысла</title>
 
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)">
 
-  <script type="text/javascript" src="code.js"></script>
-  <link rel="canonical" href="https://genrihgrigoryan.com" />
-  <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <link rel="canonical" href="https://genrihgrigoryan.com" />
+    <link rel="stylesheet" href="style.css">
 
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Генрих Григорьян" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Генрих Григорьян" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="application-name" content="Генрих Григорьян" />
-  <meta name="description" content="Is watching.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application-name" content="Генрих Григорьян" />
+    <meta name="description" content="Is watching.">
 
-  <meta property="og:site_name" content="Генрих Григорьян"/>
-  <meta property="og:description" content="Наблюдает."/>
-  <meta property="og:title" content="Генрих Григорьян">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://genrihgrigoryan.com" />
-  <meta property="og:image" content="graph-preview.jpg" />
-  
+    <meta property="og:site_name" content="Генрих Григорьян" />
+    <meta property="og:description" content="Наблюдает." />
+    <meta property="og:title" content="Генрих Григорьян">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://genrihgrigoryan.com" />
+    <meta property="og:image" content="graph-preview.jpg" />
+
 </head>
 
 <body>
 
-  <svg id="fader"></svg>
-  <script>fadeInPage();</script>
+    <svg id="fader"></svg>
+    <script>fadeInPage();</script>
 
-<h1>Конструктор Смысла</h1>
-<p>Инструменты по работе с <mark>мышлением</mark> и мировоззрением</p>
+    <h1>Конструктор Мировоззрения</h1>
+    <p>Инструменты работы с <mark>мышлением</mark> и управления <mark>опытом</mark> мира.</p>
 
-<div class="button-line">
-    <a class="button full-width border-3px" href="#formats" onclick='SelectRadio("tab1")'>
-        <div class="upfont">Курс лекций</div>
-        <div class="downfont">Аудио, видео и текст</div>
-    </a>
-    <a class="button full-width border-3px" href="#formats" onclick='SelectRadio("tab2")'>
-        <div class="upfont">Мастермайнд</div>
-        <div class="downfont">Групповые встречи</div>
-    </a>
-    <a class="button full-width border-3px" href="#formats" onclick='SelectRadio("tab3")'>
-        <div class="upfont">Диалог</div>
-        <div class="downfont">Личное общение</div>
-    </a>
+    <!--
+
+            <div class="button-line">
+            <div class="button border-2px">15 мая — 2 июня <span class="vertical-demitter border-1px"></span>9370₽<span class="vertical-demitter border-1px"></span>14 мест</div>
+            <a class="inline-button">Записаться</a>
+            </div>
+    -->
+
+    <div class="button-line">
+        <a class="button border-3px" href="#formats" onclick='SelectRadio("tab1")'>
+            <div class="upfont">Курс лекций</div>
+            <div class="downfont margin-block-start-mini color-secondary">Аудио, видео и текст</div>
+        </a>
+        <a class="button border-3px" href="#formats" onclick='SelectRadio("tab2")'>
+            <div class="upfont">Мастермайнд</div>
+            <div class="downfont margin-block-start-mini color-secondary">Групповые встречи</div>
+        </a>
+        <a class="button border-3px" href="#formats" onclick='SelectRadio("tab3")'>
+            <div class="upfont">Диалог</div>
+            <div class="downfont margin-block-start-mini color-secondary">Личное общение</div>
+        </a>
     </div>
-</div>
-
-<video controls playsinline poster="assets/test-poster.jpg">
-    <source src="assets/test.mp4" type="video/mp4">
-</video>
-
-<div class = "grid">
-    <div class="grid-child">
-        <div><strong>Как я знаю?</strong></div>
-        <div>Get suggestions as you type your question.</div>
     </div>
-    <div class="grid-child">
-        <div><strong>Что значит "есть"?</strong></div>
-        <div>Get suggestions as you type your question.</div>
-    </div>
-    <div class="grid-child">
-        <div><strong>Как я есть?</strong></div>
-        <div>IntelliBar is free, but you can pre-order a <mark>lifetime</mark> license.
+
+
+    <video controls playsinline poster="assets/test-poster.jpg">
+        <source src="assets/test.mp4" type="video/mp4">
+    </video>
+
+    <div class="grid3">
+        <div class="grid-child">
+            <div><strong>Как я знаю?</strong></div>
+            <div>Пути определения истины.</div>
+        </div>
+        <div class="grid-child">
+            <div><strong>Как я мыслю?</strong></div>
+            <div>Инструменты мышления и толкования.</div>
+        </div>
+        <div class="grid-child">
+            <div><strong>Как есть "Я"?</strong></div>
+            <div>Пути самоутверждения и самопознания.</div>
+        </div>
+        <div class="grid-child">
+            <div><strong>Что есть "мир" для меня?</strong></div>
+            <div>Стратегии взаимодействия с миром.</div>
+        </div>
+        <div class="grid-child">
+            <div><strong>Зачем я живу?</strong></div>
+            <div>Цель взаимодействовия с миром.</div>
+        </div>
+        <div class="grid-child">
+            <div><strong>Как я выбираю?</strong></div>
+            <div>Возможность свободы при наличии смысла.</div>
         </div>
     </div>
-    <div class="grid-child">
-        <div><strong>Что есть "мир" для меня?</strong></div>
-        <div>Get suggestions as you type your question.</div>
-    </div>
-    <div class="grid-child">
-        <div><strong>Зачем я живу?</strong></div>
-        <div>Get suggestions as you type your question.</div>
-    </div>
-    <div class="grid-child">
-        <div><strong>Как я выбираю?</strong></div>
-        <div>Get suggestions as you type your question.</div>
-    </div>
-</div>
 
-<h2>Описание</h1>
-<p>
-IntelliBar is just a UI for the ChatGPT API. Your questions go directly to the ChatGPT API and no one else. The only requests IntelliBar sends to our backend are to check for updates.
-</p>
+    <br>
 
-<h2>Содержание</h1>
+
+    <h2>Описание</h2>
     <p>
-    While in beta, <a>IntelliBar</a> is free, but you can pre-order a lifetime license for $29 instead of $49 and support its development. You also get all future updates for free.
+        <mark>Курс задуман</mark> как краткое подведение итогов основных достижений философии, с целью применения их для
+        кристаллизации своего мировоззрения. Убеждения, формирующие мировоззрения могут быть образованными "случайно" и
+        задача курса – предоставить слушателю инструменты, благодаря которым тот сможет проверить свои убеждения на
+        понятность и обоснованность, а также делать это в отношении других людей.
+    </p>
+    <p>
+        <mark>Курс подойдет для</mark> как краткое подведение итогов основных достижений философии, с целью применения
+        их для кристаллизации своего мировоззрения. Убеждения, формирующие мировоззрения могут быть образованными
+        "случайно" и задача курса – предоставить слушателю инструменты, благодаря которым тот сможет проверить свои
+        убеждения на понятность и обоснованность, а также делать это в отношении других людей.
+    </p>
+    <p>
+        <mark>Вы научитесь</mark> как краткое подведение итогов основных достижений философии, с целью применения их для
+        кристаллизации своего мировоззрения. Убеждения, формирующие мировоззрения могут быть образованными "случайно" и
+        задача курса – предоставить слушателю инструменты, благодаря которым тот сможет проверить свои убеждения на
+        понятность и обоснованность, а также делать это в отношении других людей.
     </p>
 
-<div class="split-div margin-block-start-medium">
-    <div class="split-left">
-        <h3>Структура мировоззрения</h2>
-    </div>
-    <div class="split-right">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-    </div>
-</div>
 
-<div class="split-div margin-block-start-medium">
-    <div class="split-left">
-        <h3>Гносеологические инструменты</h2>
-    </div>
-    <div class="split-right">
-        <p>
-            While in beta, <a href="https://ya.ru">IntelliBar</a> is free, but you can pre-order a lifetime license for $29 instead of $49 and support its development. You also get all future updates for free.
-        </p>
-    </div>
-</div>
 
-<div class="split-div margin-block-start-medium">
-    <div class="split-left">
-        <h3 >Мышление: Я и Другой</h2>
-    </div>
-    <div class="split-right">
-        <p>
-            While in beta, <a href="https://ya.ru">IntelliBar</a> is free, but you can pre-order a lifetime license for $29 instead of $49 and support its development. You also get all future updates for free.
-        </p>
-    </div>
-</div>
-
-    
-<h2 id="formats">Формат обучения</h1>
+<h2>Содержание</h1>
 <p>
-    Вы можете выбрать наиболее подходящий для вас вариант прохождения курса: в виде подготовленных материалов; в группе, или в виде личного диалога со мной.
+    Курс построен по принципу погружения внутрь себя – от "бытовых" практик применения мышления, таких как
+    познание фактов; к познанию самого себя и того, что человек считает сакральным — более реальным чем
+    реальное.
+</p>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">1.</span>Структура мировоззрения</h3>
+    </div>
+    <div class="split-right">
+        <p>Что лежит в основе мировоззрения и как на это можно влиять.</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">2.</span>Гносеологические орудия</h3>
+    </div>
+    <div class="split-right">
+        <p>Рассмотрим различные подходы к ответу на вопрос: "что есть истина?"</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">3.</span>Мышление</h3>
+    </div>
+    <div class="split-right">
+        <p>Основные способы мышления и применения их в контексте познания и самопознания.</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">4.</span>«Другой» и «другой»</h3>
+    </div>
+    <div class="split-right">
+        <p>Центральная структура мышления, дающая возможность и мотивацию действия.</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">5.</span>Самопознание</h3>
+    </div>
+    <div class="split-right">
+        <p>Чем больше человек вглядывается в себя, тем больше обнаруживает наличие иного. Пройдем по путям поиска себя и их деконструкции.</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+        <h3><span class="header-num">6.</span>Онтологические основания</h3>
+    </div>
+    <div class="split-right">
+        <p>Подведя итог гносеологических поисков, мы можем сформировать представление о мире.</p>
+    </div>
+</div>
+
+<div class="split-div margin-block-start-medium">
+    <div class="split-left">
+            <h3><span class="header-num">7.</span>Смысл, Сакральное , Язык</h3>
+    </div>
+    <div class="split-right">
+        <p>
+        Продолжая гносеологические поиски, начатые в первом разделе, мы можем задаться вопросом природы смысла.
+        Смысл дерева или притяжения существует вне зависимости от нашего сознания и мы только открываем его,
+        либо наше описание смысла того или иного предмета является нашим изобретением?
+        </p>
+    </div>
+</div>
+
+
+
+<h2 id="formats">Вид обучения</h1>
+<p>
+    Вы можете выбрать наиболее подходящий для вас вариант прохождения курса: в виде подготовленных материалов; в
+    группе, или в виде личного диалога с автором.
 </p>
 
 <div class="tabs">
-    <input type="radio" name="tabs" id="tab1" checked="checked">
-    <label for="tab1">Курс лекций</label>
-    <div class="tab">
-        <p>Познание начинается с удивления. Удивляется ребенок, получивший необычный опыт и связавший этот опыт со словом, названным родителем. Удивляется ученый, узнавший о собственном заблуждении в отношении предмета своего исследования. Удивляется взрослый, открывший для себя неочевидность того, что считалось для него очевидным ранее. </p>
-        <a class = "inline-button">Получить доступ</a><span class = "price">1000₽</span>
-      </div>
+    <input type="radio" name="tabs" id="tab1" value="" checked>
+    <label for="tab1">Материалы</label>
 
-    <input type="radio" name="tabs" id="tab2">
+    <input type="radio" name="tabs" id="tab2" value="">
     <label for="tab2">Мастермайнд</label>
-    <div class="tab">
-        <p>Но что такое познание? История философии дала нам множество подходов к этому вопросу, объединяя их в раздел гносеологии. Именно с изучения гносеологических инструментов (или орудий) мы и начнем погружение в исследование собственных убеждений. </p>
-        <a class = "inline-button">Вступить в группу</a><span class = "price">3000₽</span>
-          </div>
 
-    <input type="radio" name="tabs" id="tab3">
+    <input type="radio" name="tabs" id="tab3" value="">
     <label for="tab3">Диалог</label>
-    <div class="tab">
-        <p>Понятия «знание», «истина» и «реальность» тесно взамосвязаны и являются для человека почвой под ногами, на которой он выстраивает свою жизнь. Поэтому, чтобы обрести «гносеологические орудия» мы рассмотрим различные подходы к ответу на вопрос: что есть истина? </p>
-        <a class = "inline-button">Связаться</a><span class = "price">Стоимость уточняется</span>
-      </div>
 
+    <div class="tab" id="content-1">
+        <p>Текстовый вариант лекций, предоставленный в форматах <mark>epub</mark> и <mark>pdf</mark>; а также
+            аудио и видео версии прочтения автором курса.<br>Материалы предоставляются на вечный доступ в
+            телеграм канале.</p>
+        <a class="inline-button">Получить</a><span class="price"><a>Посмотреть демо</a></span>
     </div>
 
-    <h2>Об авторе</h1>
-        <div class="split-div">
-            <div class="split-right">
-                <p>
-                    While in beta, <a href="https://ya.ru">IntelliBar</a> is free, but you can pre-order a lifetime license for $29 instead of $49 and support its development. You also get all future updates for free.
-                </p>
-            </div>
-            <div class="split-left">
-                <img src="assets/avatar.png" width="250" height="250" style="display: block; margin: auto; object-fit: contain; margin-top: 10px;">
-            </div>
+    <div class="tab" id="content-2">
+        <p>Онлайн прочтение курса в небольшой группе, с возможностью совместного обсуждения и взаимодействия.
+            Группы набираются регулярно, ближайшее чтение будет в <mark>четверг, 21 cентября 19:00</mark>.
+            Подписывайтесь на обновления чтобы быть к курсе.</p>
+        <h3>Календарь мероприятий</h3>
+        <ol>
+            <li>
+                <mark><s>21 апреля</s></mark> Структура мировоззрения
+            </li>
+            <li>
+                <mark>24 апреля</mark> Онтологические основания
+            </li>
+            <li>
+                <mark>24 апреля</mark> Онтологические основания
+            </li>
+            <li>
+                <mark>24 апреля</mark> Онтологические основания
+            </li>
+            <li>
+                <mark>24 апреля</mark> Онтологические основания
+            </li>
+            <li>
+                <mark>24 апреля</mark> Онтологические основания
+            </li>
+        </ol>
+
+        <a class="inline-button">Вступить</a><span class="price">1900₽</span>
+    </div>
+
+    <div class="tab" id="content-3">
+        <p>Личное прочтение курса с применением инструментов к актуальным жизненным вопросам участника.
+            Длительность и программа курса могут варьироваться в зависимости от потребностей.</p>
+        <div class="button-line">
+            <div class="button border-2px">15 мая — 2 июня <span
+                    class="vertical-demitter border-1px"></span>9370₽<span
+                    class="vertical-demitter border-1px"></span>14 мест</div>
+            <a class="inline-button">Записаться</a>
         </div>
+    </div>
+</div>
+
+<h2>От автора</h1>
+    <div class="split-div">
+        <div class="split-right">
+            <p>
+                Меня зовут <a href="https://ya.ru">Генрих</a>.<br>
+                Этот курс является промежуточным подведением итогов моих философских поисков.
+            </p>
+        </div>
+        <div class="split-left">
+            <img src="assets/avatar.png" width="250" height="250"
+                style="/*display: block;*/ margin: auto; object-fit: contain; margin-top: 10px;">
+        </div>
+    </div>
+
+
 
 
 <h2>Вопросы и ответы</h1>
-    <p>
-    While in beta, IntelliBar is free, but you can pre-order a lifetime license for $29 instead of $49 and support its development. You also get all future updates for free.
-    </p>
-    
-    
-    <button class="accordion"><strong>Форматы продаются отдельно?</strong></button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <hr>
-    
-    <button class="accordion"><strong>В каком виде представлен курс?
-    </strong></button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <hr>
-    
-    <button class="accordion"><strong>Где проходят встречи?</strong></button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <hr>
-    
-    <button class="accordion"><strong>Можно ли изучать материал в нескольких форматах?</strong></button>
-    <div class="panel">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+<p>
+    Ниже представлены ответы на популярные вопросы. Если у вас есть вопрос, которого нет в списке –
+    можете написать на почту <a href="https://ya.ru">mail@mail.ru</a> или в телеграм <a
+        href="https://ya.ru">@ggasupport</a><br>
+</p>
 
-    <h2>Выбрать продукт</h1>
-        <p>
-        IntelliBar is just a UI for the ChatGPT API. Your questions go directly to the ChatGPT API and no one else. The only requests IntelliBar sends to our backend are to check for updates.
-        </p>
-        <div class="button-line centered">
-            <div class="button full-width border-2px" >
-                <div class="upfont"><b>Курс лекций</b></div>
-                <div class = "price">900₽</div>
-                <div class="downfont"><ul class="tier-ul">
-                    <li>Групповые встречи</li>
-                    <li>Персональный план</li>
-                    <li>Личное общение</li>
-                </ul></div>
-                <div class="tier-button">Купить</div>
+
+<button class="accordion-right"><strong>Форматы продаются отдельно?</strong></button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<hr>
+
+<button class="accordion-right"><strong>В каком виде представлен курс?
+    </strong></button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<hr>
+
+<button class="accordion-right"><strong>Где проходят встречи?</strong></button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<hr>
+
+<button class="accordion-right"><strong>Можно ли изучать материал в нескольких
+        форматах?</strong></button>
+<div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="button-line">
+    <div class="button full-width border-2px">
+        <div class="grid2">
+            <div class="grid-child margin-block-start-small">
+                <h2 class="no-margin">Записаться на курс</h2>
+                <p class="downfont">Стоимость входного билета растёт по мере приближения к началу
+                    занятий:</p>
+                <div class="button border-2px centered">
+                    15 мая — 2 июня 
+                    <span class="vertical-demitter border-1px"></span>9370₽
+                    <span class="vertical-demitter border-1px"></span>14 мест
+                </div>
             </div>
-            <div class="button full-width border-2px">
-                <div class="upfont"><b>Мастермайнд</b></div>
-                <div class = "price">1900₽</div>
-                <div class="downfont"><ul class="tier-ul">
-                    <li>Групповые встречи</li>
-                    <li>Персональный план</li>
-                    <li>Личное общение</li>
-                </ul></div>                <div class="tier-button">Вступить</div>
-            </div>
-            <div class="button full-width border-2px">
-                <div class="upfont"><b>Диалог</b></div>
-                <div class = "price">?</div>
-                <div class="downfont"><ul class="tier-ul">
-                    <li>Групповые встречи</li>
-                    <li>Персональный план</li>
-                    <li>Личное общение</li>
-                </ul></div>                <div class="tier-button">Связаться</div>
-            </div>
+            <div class="grid-child margin-block-start-small">
+                <a class="inline-button centered"
+                    style="width: calc(100% - 2rem); height: 2.5rem;"><strong>Купить 9370₽</strong></a>
+                <p class="downfont color-secondary">Оплата через телеграм-бота. После оплаты бот пришлёт
+                    ссылку на вступление в чат. Принимаются российские карты. Если такой нет — пишите,
+                    что-нибудь придумаем. Нажимая эту кнопку, вы соглашаетесь с офертой и политикой
+                    обработки персональных данных.</p>
             </div>
         </div>
+    </div>
+</div>
+
+
+<h2>Выбрать продукт</h2>
+<p>
+    IntelliBar is just a UI for the ChatGPT API. Your questions go directly to the ChatGPT API and
+    no one else. The only requests IntelliBar sends to our backend are to check for updates.
+</p>
+
+<div class="button-line centered">
+    <div class="button full-width border-2px">
+        <div class="upfont"><b>Курс лекций</b></div>
+        <div class="price">900₽</div>
+        <div class="downfont">
+            <ul class="tier-ul">
+                <li>Групповые встречи</li>
+                <li>Персональный план</li>
+                <li>Личное общение</li>
+            </ul>
+        </div>
+        <div class="tier-button">Купить</div>
+    </div>
+    <div class="button full-width border-2px">
+        <div class="upfont"><b>Мастермайнд</b></div>
+        <div class="price">1900₽</div>
+        <div class="downfont">
+            <ul class="tier-ul">
+                <li>Групповые встречи</li>
+                <li>Персональный план</li>
+                <li>Личное общение</li>
+            </ul>
+        </div>
+        <div class="tier-button">Вступить</div>
+    </div>
+    <div class="button full-width border-2px">
+        <div class="upfont"><b>Диалог</b></div>
+        <div class="price">Идивидуально</div>
+        <div class="downfont">
+            <ul class="tier-ul">
+                <li>Групповые встречи</li>
+                <li>Персональный план</li>
+                <li>Личное общение</li>
+            </ul>
+        </div>
+        <div class="tier-button">Связаться</div>
+    </div>
+</div>
 
 <footer>
     По вопросам пишите на почту <a>mail@mail.com</a> или в телеграм <a>@mailme</a>.
@@ -244,14 +400,16 @@ IntelliBar is just a UI for the ChatGPT API. Your questions go directly to the C
 
 
 <!--<script type="text/javascript" src="zenscroll-min.js"></script>-->
+<!--
 <script src="smooth-scroll.polyfills.min.js"></script>
 <script>
     var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 2500,
-	speedAsDuration: true,
-    easing: 'easeInOutCubic'
-});
+        speed: 2500,
+        speedAsDuration: true,
+        easing: 'easeInOutCubic'
+    });
 </script>
+-->
 
 
 </body>

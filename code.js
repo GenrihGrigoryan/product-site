@@ -30,7 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    var acc = document.getElementsByClassName("accordion");
+    var acc1 = document.getElementsByClassName("accordion-left");
+    var acc2 = document.getElementsByClassName("accordion-right");
+    var acc;
+    if(acc1.length>0){
+        acc=acc1;
+    }
+    if(acc2.length>0){
+        acc=acc2;
+    }
 
     for (var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
@@ -56,9 +64,34 @@ window.addEventListener('pageshow', function (event) {
     fader.classList.remove('fade-in');
 });
 
+
+
 function SelectRadio(choice) {
     const yesBtn = document.getElementById(choice);
     yesBtn.checked = true;
+    
+    /*
+    easyScroll({
+        'scrollableDomEle': document.querySelector('#formats'),
+        'direction': 'bottom',
+        'duration': 200000,
+        'easingPreset': 'easeInOutCubic',
+        'scrollAmount': 200
+    });
+    */
+    //doScrolling(document.querySelector('#formats').offsetTop, 5000);
+    /*
+    jQuery.easing.def = 'easeOutBounce';
+    const destination = $('#formats');
+    $('html,body').animate({
+        scrollTop: destination.offset().top
+    },1000);
+    */
+    /*
+    document.querySelector('#formats').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    */
     /*
     const radioButtons = document.querySelectorAll('input[name="tabs"]');
     for (const radioButton of radioButtons) {
